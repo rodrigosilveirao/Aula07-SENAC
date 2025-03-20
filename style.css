@@ -1,0 +1,107 @@
+body{
+    background-color: darkgray;
+}
+
+.container{
+    display: grid;
+    background-color: dodgerblue;
+    height: 100vh;
+    padding: 10px;
+    gap: 10px;    /*column-gap: 10px;*/    /*row-gap: 10px; */
+
+    grid-template-columns: 2fr 1fr; /* 2fr 1 fr */
+    grid-template-rows: auto auto auto auto auto auto;
+
+
+
+    grid-template-areas: 
+    'header header'
+    'nav nav'
+    'sessao1 sobremim'
+    'sessao2 postagem'
+    'contato redessociais'
+    'footer footer'
+    ;
+
+
+
+}
+
+.container > div{
+    background-color: white;
+    padding: 20px;
+    text-align: center;
+    border: 1px solid black;
+}
+
+.item1{
+ grid-area: header;
+}
+
+ul{
+    display: flex;
+    align-items: left;
+    gap: 10px;
+    padding: 0;
+    margin: 0;
+    
+}
+.item2{
+    grid-area: nav;
+    height: 8px;
+}
+
+.item3{
+    grid-area: sessao1;
+    
+}
+
+.item4{
+    grid-area: sessao2;
+
+}
+
+.item5{
+    grid-area: contato;
+    
+}
+
+.item6{
+    grid-area: sobremim;
+
+}
+
+.item7{
+    grid-area: postagem;
+
+}
+
+.item8{
+    grid-area: redessociais;
+
+}
+
+.item9{
+  grid-area: footer; 
+  
+}
+
+@media (max-width: 500px){
+    .container{
+        grid-template-areas: 
+        'header '
+        'nav'
+        'sessao1 '
+        'sessao2 '
+        'contato '
+        'sobremim'
+        'postagem'
+        'redessociais'
+        'footer '
+        ;
+
+    grid-template-columns: auto;
+
+    }
+}
+
